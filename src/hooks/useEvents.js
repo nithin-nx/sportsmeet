@@ -13,7 +13,16 @@ export const useEvents = () => {
                     .from('events')
                     .select('*');
 
-                const rawEvents = (error || !data || data.length === 0) ? MOCK_EVENTS : data;
+                const rawData = (error || !data || data.length === 0) ? MOCK_EVENTS : data;
+
+                // Merge rules from MOCK_EVENTS if they are missing in the database
+                const rawEvents = rawData.map(ev => {
+                    const mockMatch = MOCK_EVENTS.find(m => m.name.toLowerCase() === ev.name.toLowerCase());
+                    return {
+                        ...ev,
+                        rules: ev.rules || mockMatch?.rules || []
+                    };
+                });
 
                 // Sorting logic:
                 // 1. Confirmed Upcoming (Has Date)
