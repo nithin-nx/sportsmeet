@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS events (
   venue TEXT, -- Nullable for "Coming Soon"
   category TEXT NOT NULL CHECK (category IN ('athletics', 'games')),
   status TEXT NOT NULL DEFAULT 'upcoming' CHECK (status IN ('upcoming', 'completed')),
+  rules TEXT[] DEFAULT '{}', -- Added for event guidelines
   created_at TIMESTAMPTZ DEFAULT now()
 );
 
