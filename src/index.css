@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-sans overflow-x-hidden;
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(0, 114, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, rgba(255, 71, 87, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 100% 100%, rgba(0, 212, 255, 0.05) 0%, transparent 40%);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+
+
+  /* Grain overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display uppercase tracking-wider;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl transition-all duration-500;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .glass-card:hover {
+    @apply bg-white/10 border-white/20 -translate-y-2;
+    box-shadow: 0 15px 45px 0 rgba(0, 114, 255, 0.1);
+  }
+
+  .parallax-bg {
+    @apply absolute inset-0 -z-10 opacity-20 pointer-events-none;
+    transform: translateZ(-1px) scale(2);
+  }
+
+  .section-divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent my-12;
+  }
+
+  .glass-nav {
+    @apply bg-dark-bg/80 backdrop-blur-xl border-b border-white/5 shadow-2xl;
+  }
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
