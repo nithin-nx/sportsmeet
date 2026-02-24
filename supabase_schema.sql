@@ -62,7 +62,20 @@ ON CONFLICT (name) DO NOTHING;
 -- 6. Full Event Catalog
 INSERT INTO events (name, icon, date, time, venue, category, status) VALUES 
 -- Games
-('Handball', '🤾', NULL, NULL, NULL, 'games', 'upcoming'),
+('Handball', '🤾', NULL, NULL, NULL, 'games', 'upcoming', ARRAY[
+  'The goalkeeper is the only player allowed to touch the ball with feet inside the goal area.',
+  'On-court players must not step into the goal area.',
+  'Rolling substitutions are allowed, but max 7 players per team on court at once.',
+  'Charging a player from behind leads to a 2-minute suspension.',
+  'Maximum 3 steps allowed with the ball without dribbling.',
+  'Ball cannot be held for more than 3 seconds without throwing or dribbling.',
+  'Attacking team cannot play the ball back across the center line once passed.',
+  'Passive play rule: Shot must be taken within 56 seconds or a free-throw is awarded to the defense.',
+  'Double dribble is strictly prohibited.',
+  'Court players are not allowed to touch the ball with their feet or lower legs.',
+  'Players must not rip the ball from an opponent\'s hands or use excessive force (pushing/ripping).',
+  'Obey committee rules; otherwise, disciplinary action will be taken.'
+]),
 ('Throwball', '🏐', NULL, NULL, NULL, 'games', 'upcoming'),
 ('Volleyball', '🏐', NULL, NULL, NULL, 'games', 'upcoming'),
 ('Basketball', '🏀', NULL, NULL, NULL, 'games', 'upcoming'),

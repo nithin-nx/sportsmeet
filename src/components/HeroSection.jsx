@@ -40,12 +40,16 @@ const HeroSection = () => {
                     transition={{ duration: 1, delay: 0.5 }}
                     className="flex items-center gap-6 mb-8"
                 >
-                    {[1, 2, 3].map((num) => (
+                    {[
+                        { num: 1, ext: 'png' },
+                        { num: 2, ext: 'png' },
+                        { num: 3, ext: 'jpeg' }
+                    ].map(({ num, ext }) => (
                         <div key={num} className="relative group">
                             <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent-gold rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                             <div className="relative w-16 h-16 md:w-20 md:h-20 bg-dark-bg rounded-full overflow-hidden border border-white/10 shadow-2xl transform transition duration-500 group-hover:scale-110">
                                 <img
-                                    src={`/logo${num}.jpg`}
+                                    src={`/logo${num}.${ext}`}
                                     alt={`College Logo ${num}`}
                                     className="w-full h-full object-cover"
                                 />

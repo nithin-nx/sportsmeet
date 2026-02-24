@@ -42,7 +42,7 @@ const Navbar = () => {
                                 className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-xl border border-white/10 shadow-2xl"
                             >
                                 <img
-                                    src="/logo1.jpg"
+                                    src="/logo1.png"
                                     alt="College Logo"
                                     className="w-full h-full object-cover"
                                 />

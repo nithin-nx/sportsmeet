@@ -104,7 +104,30 @@ export const MOCK_EVENTS = [
     },
 
     // New Events (All Coming Soon)
-    { id: 'e7', name: 'Handball', icon: '🤾', date: null, time: null, venue: null, status: 'upcoming', category: 'games', rules: ["Standard Handball rules applying to 7-a-side matches."] },
+    {
+        id: 'e7',
+        name: 'Handball',
+        icon: '🤾',
+        date: null,
+        time: null,
+        venue: null,
+        status: 'upcoming',
+        category: 'games',
+        rules: [
+            "The goalkeeper is the only player allowed to touch the ball with feet inside the goal area.",
+            "On-court players must not step into the goal area.",
+            "Rolling substitutions are allowed, but max 7 players per team on court at once.",
+            "Charging a player from behind leads to a 2-minute suspension.",
+            "Maximum 3 steps allowed with the ball without dribbling.",
+            "Ball cannot be held for more than 3 seconds without throwing or dribbling.",
+            "Attacking team cannot play the ball back across the center line once passed.",
+            "Passive play rule: Shot must be taken within 56 seconds or a free-throw is awarded to the defense.",
+            "Double dribble is strictly prohibited.",
+            "Court players are not allowed to touch the ball with their feet or lower legs.",
+            "Players must not rip the ball from an opponent's hands or use excessive force (pushing/ripping).",
+            "Obey committee rules; otherwise, disciplinary action will be taken."
+        ]
+    },
     { id: 'e8', name: 'Throwball', icon: '🏐', date: null, time: null, venue: null, status: 'upcoming', category: 'games', rules: ["Ball must be caught with both hands.", "Maximum 3 touches per side."] },
     { id: 'e9', name: 'Volleyball', icon: '🏐', date: null, time: null, venue: null, status: 'upcoming', category: 'games', rules: ["Standard FIVB rules for 6-a-side.", "Best of 3 sets for group stages."] },
     { id: 'e10', name: 'Basketball', icon: '🏀', date: null, time: null, venue: null, status: 'upcoming', category: 'games', rules: ["4 quarters of 8 minutes each.", "Standard FIBA foul rules apply."] },

@@ -18,10 +18,14 @@ function App() {
         </main>
         <footer className="py-12 px-4 text-center border-t border-white/5 bg-dark-bg/50 backdrop-blur-md">
           <div className="flex justify-center gap-6 mb-8 opacity-40 hover:opacity-100 transition-opacity duration-500">
-            {[1, 2, 3].map((num) => (
+            {[
+              { num: 1, ext: 'png' },
+              { num: 2, ext: 'png' },
+              { num: 3, ext: 'jpeg' }
+            ].map(({ num, ext }) => (
               <img
                 key={num}
-                src={`/logo${num}.jpg`}
+                src={`/logo${num}.${ext}`}
                 alt={`Logo ${num}`}
                 className="w-8 h-8 md:w-10 md:h-10 rounded-lg filter grayscale hover:grayscale-0 transition-all duration-300"
               />
