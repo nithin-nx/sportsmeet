@@ -159,7 +159,7 @@ const PointsTablePage = () => {
                 />
             </div>
 
-            {/* Overall Standings Section */}
+            {/* Overall Standings Section 
             <div className="pt-16 md:pt-20 border-t border-white/10 relative">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark-bg px-6 md:px-8">
                     <Stars className="text-accent-gold w-6 h-6 md:w-8 md:h-8" />
@@ -171,7 +171,7 @@ const PointsTablePage = () => {
                     colorClass="text-accent-gold"
                     delay={0.6}
                 />
-            </div>
+            </div>*/}
         </motion.div>
     );
 };
