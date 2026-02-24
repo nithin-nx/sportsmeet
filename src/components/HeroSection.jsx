@@ -34,6 +34,27 @@ const HeroSection = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 relative z-10 text-center flex flex-col items-center">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="flex items-center gap-6 mb-8"
+                >
+                    {[1, 2, 3].map((num) => (
+                        <div key={num} className="relative group">
+                            <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent-gold rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <div className="relative w-16 h-16 md:w-20 md:h-20 bg-dark-bg rounded-full overflow-hidden border border-white/10 shadow-2xl transform transition duration-500 group-hover:scale-110">
+                                <img
+                                    src={`/logo${num}.jpg`}
+                                    alt={`College Logo ${num}`}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+                            </div>
+                        </div>
+                    ))}
+                </motion.div>
+
                 <motion.p
                     initial={{ opacity: 0, letterSpacing: '0.1em' }}
                     animate={{ opacity: 1, letterSpacing: '0.4em' }}

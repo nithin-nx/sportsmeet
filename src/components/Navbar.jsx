@@ -36,12 +36,17 @@ const Navbar = () => {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 md:h-20">
-                        <Link to="/" className="flex items-center gap-2 group">
+                        <Link to="/" className="flex items-center gap-3 group">
                             <motion.div
-                                whileHover={{ rotate: 15, scale: 1.1 }}
-                                className="text-accent-gold"
+                                whileHover={{ rotate: 10, scale: 1.1 }}
+                                className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-xl border border-white/10 shadow-2xl"
                             >
-                                <Trophy size={28} />
+                                <img
+                                    src="/logo1.jpg"
+                                    alt="College Logo"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
                             </motion.div>
                             <span className="text-xl md:text-2xl font-display font-black uppercase tracking-tighter">
                                 GECI <span className="text-primary truncate">Sports Meet</span>
