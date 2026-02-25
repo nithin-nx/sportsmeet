@@ -90,7 +90,7 @@ const EventDetailsPage = () => {
                                                     key={res.id}
                                                     className={`border-b border-white/5 transition-all hover:bg-white/[0.02] ${res.position === 1 ? 'bg-accent-gold/5' : ''}`}
                                                 >
-                                                    <td className="py-8 px-8">
+                                                    <td className="py-12 px-8">
                                                         <div className="flex justify-center">
                                                             {res.position === 1 ? (
                                                                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent-gold to-yellow-600 text-dark-bg flex items-center justify-center font-black shadow-[0_0_20px_rgba(255,215,0,0.3)] italic border-2 border-white/20">
@@ -109,16 +109,16 @@ const EventDetailsPage = () => {
                                                             )}
                                                         </div>
                                                     </td>
-                                                    <td className="py-8 px-8">
+                                                    <td className="py-12 px-8">
                                                         <span className="text-xl font-black uppercase tracking-tight italic block">{res.player_name}</span>
                                                     </td>
-                                                    <td className="py-8 px-8">
+                                                    <td className="py-12 px-8">
                                                         <div className="flex items-center gap-3">
                                                             <div className="w-2.5 h-2.5 rounded-full ring-4 ring-white/5" style={{ backgroundColor: res.departments?.color }}></div>
-                                                            <span className="text-white/70 font-bold uppercase text-xs tracking-widest">{res.departments?.name}</span>
+                                                            <span className="text-xl font-black uppercase tracking-tight italic block text-white/70">{res.departments?.name}</span>
                                                         </div>
                                                     </td>
-                                                    <td className="py-8 px-8 text-right">
+                                                    <td className="py-12 px-8 text-right">
                                                         <motion.span
                                                             whileHover={{ scale: 1.1 }}
                                                             className={`font-display font-black text-3xl italic ${res.position === 1 ? 'text-accent-gold' : 'text-primary'}`}
