@@ -20,7 +20,7 @@ const EventDetailsPage = () => {
             animate={{ opacity: 1, x: 0 }}
             className="max-w-5xl mx-auto px-4 py-12 md:py-20"
         >
-            <Link to="/" className="inline-flex items-center gap-2 text-white/40 hover:text-primary mb-12 transition-all group font-black uppercase text-xs tracking-widest">
+            <Link to="/#events" className="inline-flex items-center gap-2 text-white/40 hover:text-primary mb-12 transition-all group font-black uppercase text-xs tracking-widest">
                 <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                 Back to Home
             </Link>

@@ -2,14 +2,25 @@ import { motion } from 'framer-motion';
 import HeroSection from '../components/HeroSection';
 import EventCard from '../components/EventCard';
 import LoadingSpinner from '../components/LoadingSpinner';
-import { useEvents } from '../hooks/useEvents';
-import { useDepartments } from '../hooks/useDepartments';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const HomePage = () => {
-    const { athleticsEvents, gamesEvents, loading: eventsLoading } = useEvents();
-    const { loading: deptsLoading } = useDepartments();
+const HomePage = ({ athleticsEvents = [], gamesEvents = [], loading = false }) => {
+    const location = useLocation();
 
-    if (eventsLoading || deptsLoading) return <LoadingSpinner size="lg" />;
+    useEffect(() => {
+        if (!loading && location.hash === '#events') {
+            const timer = setTimeout(() => {
+                const element = document.getElementById('events');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+            return () => clearTimeout(timer);
+        }
+    }, [location, loading]);
+
+    if (loading) return <LoadingSpinner size="lg" />;
 
     return (
         <motion.div
@@ -19,7 +30,7 @@ const HomePage = () => {
         >
             <HeroSection />
 
-            <div className="max-w-7xl mx-auto px-6 space-y-32 md:space-y-48 mt-20 relative">
+            <div id="events" className="max-w-7xl mx-auto px-6 space-y-32 md:space-y-48 mt-20 relative">
                 {/* Games Section */}
                 <section>
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">

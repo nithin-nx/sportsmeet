@@ -3,15 +3,28 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import EventDetailsPage from './pages/EventDetailsPage';
 import PointsTablePage from './pages/PointsTablePage';
+import { useEvents } from './hooks/useEvents';
+import { useDepartments } from './hooks/useDepartments';
 
 function App() {
+  const { athleticsEvents, gamesEvents, loading: eventsLoading } = useEvents();
+  const { loading: deptsLoading } = useDepartments();
+
+  const homeLoading = eventsLoading || deptsLoading;
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow pt-20">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={
+              <HomePage
+                athleticsEvents={athleticsEvents}
+                gamesEvents={gamesEvents}
+                loading={homeLoading}
+              />
+            } />
             <Route path="/event/:id" element={<EventDetailsPage />} />
             <Route path="/points" element={<PointsTablePage />} />
           </Routes>
