@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import EventDetailsPage from './pages/EventDetailsPage';
 import PointsTablePage from './pages/PointsTablePage';
 import WinnersPage from './pages/WinnersPage';
+import LiveScoresPage from './pages/LiveScoresPage';
 import { useEvents } from './hooks/useEvents';
 import { useDepartments } from './hooks/useDepartments';
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/event/:id" element={<EventDetailsPage />} />
             <Route path="/points" element={<PointsTablePage />} />
             <Route path="/winners" element={<WinnersPage />} />
+            <Route path="/live" element={<LiveScoresPage />} />
           </Routes>
         </main>
         <footer className="py-12 px-4 text-center border-t border-white/5 bg-dark-bg/50 backdrop-blur-md">

@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Trophy, Home, BarChart2, Menu, X, Stars } from 'lucide-react';
+import { Trophy, Home, BarChart2, Menu, X, Stars, Activity } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -25,6 +25,7 @@ const Navbar = () => {
         { name: 'Home', path: '/', icon: <Home size={18} /> },
         { name: 'Points Table', path: '/points', icon: <BarChart2 size={18} /> },
         { name: 'Winners', path: '/winners', icon: <Stars size={18} /> },
+        { name: 'Live Scores', path: '/live', icon: <Activity size={18} /> },
     ];
 
     return (
