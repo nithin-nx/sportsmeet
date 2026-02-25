@@ -75,7 +75,9 @@ const WinnerPosterCard = ({ poster }) => {
                     <div className="flex justify-between items-start gap-4 mb-4">
                         <div>
                             <h3 className="text-xl font-black uppercase italic tracking-tight mb-1">{poster.title}</h3>
-                            <p className="text-xs text-white/40 font-bold uppercase tracking-widest">{poster.winnerName}</p>
+                            {poster.winnerName && (
+                                <p className="text-xs text-white/40 font-bold uppercase tracking-widest">{poster.winnerName}</p>
+                            )}
                         </div>
                         <button
                             onClick={handleLike}
@@ -104,8 +106,8 @@ const WinnerPosterCard = ({ poster }) => {
 const WinnersPage = () => {
     const [search, setSearch] = useState('');
     const filteredPosters = winnersPosters.filter(p =>
-        p.title.toLowerCase().includes(search.toLowerCase()) ||
-        p.winnerName.toLowerCase().includes(search.toLowerCase())
+        (p.title && p.title.toLowerCase().includes(search.toLowerCase())) ||
+        (p.winnerName && p.winnerName.toLowerCase().includes(search.toLowerCase()))
     );
 
     return (
