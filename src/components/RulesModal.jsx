@@ -28,14 +28,14 @@ const RulesModal = ({ isOpen, onClose, eventName, rules }) => {
                         initial={{ scale: 0.9, opacity: 0, y: 20 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                        className="bg-zinc-900 border border-white/10 w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col relative"
+                        className="bg-zinc-900 border border-white/10 w-full max-w-lg rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col relative max-h-[85vh]"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Minimal Header */}
-                        <div className="p-8 border-b border-white/5 flex items-center justify-between">
+                        <div className="p-6 border-b border-white/5 flex items-center justify-between">
                             <div>
-                                <h2 className="text-2xl font-black uppercase italic tracking-tighter text-white">{eventName} Rules</h2>
-                                <p className="text-[10px] text-primary uppercase font-black tracking-[0.3em] mt-1">Official Tournament Guidelines</p>
+                                <h2 className="text-xl font-black uppercase italic tracking-tighter text-white">{eventName} Rules</h2>
+                                <p className="text-[9px] text-primary uppercase font-black tracking-[0.3em] mt-1">Official Tournament Guidelines</p>
                             </div>
                             <button
                                 onClick={onClose}
@@ -46,8 +46,8 @@ const RulesModal = ({ isOpen, onClose, eventName, rules }) => {
                         </div>
 
                         {/* Focused Rules List */}
-                        <div className="p-8 pb-10 flex-grow overflow-y-auto custom-scrollbar max-h-[60vh]">
-                            <div className="space-y-6">
+                        <div className="p-6 pb-8 flex-grow overflow-y-auto custom-scrollbar max-h-[45vh]">
+                            <div className="space-y-5">
                                 {rules && rules.length > 0 ? (
                                     rules.map((rule, idx) => (
                                         <motion.div
@@ -75,10 +75,10 @@ const RulesModal = ({ isOpen, onClose, eventName, rules }) => {
                         </div>
 
                         {/* Simple Footer */}
-                        <div className="p-8 pt-0">
+                        <div className="p-6 pt-0">
                             <button
                                 onClick={onClose}
-                                className="w-full py-4 rounded-2xl bg-white/5 border border-white/10 text-white/60 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white/10 hover:text-white transition-all"
+                                className="w-full py-3.5 rounded-xl bg-white/5 border border-white/10 text-white/60 text-[9px] font-black uppercase tracking-[0.2em] hover:bg-white/10 hover:text-white transition-all"
                             >
                                 Close Rules
                             </button>

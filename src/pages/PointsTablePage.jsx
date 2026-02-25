@@ -144,19 +144,21 @@ const PointsTablePage = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 mb-24 md:mb-32">
                 <LeaderboardTable
-                    title="Athletics"
-                    departments={athleticsDepts}
-                    icon={Dumbbell}
-                    colorClass="text-primary"
-                    delay={0.2}
-                />
-                <LeaderboardTable
                     title="Sports Games"
                     departments={gamesDepts}
                     icon={Gamepad2}
                     colorClass="text-accent-crimson"
                     delay={0.4}
                 />
+
+                <LeaderboardTable
+                    title="Athletics"
+                    departments={athleticsDepts}
+                    icon={Dumbbell}
+                    colorClass="text-primary"
+                    delay={0.2}
+                />
+
             </div>
 
             {/* Overall Standings Section 

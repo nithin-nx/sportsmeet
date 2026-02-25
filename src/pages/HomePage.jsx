@@ -19,7 +19,7 @@ const HomePage = () => {
         >
             <HeroSection />
 
-            <div className="max-w-7xl mx-auto px-6 space-y-32 md:space-y-48 mt-20 relative z-30">
+            <div className="max-w-7xl mx-auto px-6 space-y-32 md:space-y-48 mt-20 relative">
                 {/* Games Section */}
                 <section>
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
