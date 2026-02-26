@@ -40,5 +40,12 @@ export const winnersPosters = [
         title: 'CARROM DOUBLES WOMEN CHAMPIONS',
         category: 'Games',
         date: '2026-02-25'
+    },
+    {
+        id: '6',
+        image: '/winners/carromdoublemen.jpeg',
+        title: 'CARROM DOUBLES MEN CHAMPIONS',
+        category: 'Games',
+        date: '2026-02-25'
     }
 ];
