@@ -47,5 +47,12 @@ export const winnersPosters = [
         title: 'CARROM DOUBLES MEN CHAMPIONS',
         category: 'Games',
         date: '2026-02-25'
+    },
+    {
+        id: '7',
+        image: '/winners/ttsinglewomen.jpeg',
+        title: 'TABLE TENNIS SINGLES WOMEN CHAMPIONS',
+        category: 'Games',
+        date: '2026-02-26'
     }
 ];
