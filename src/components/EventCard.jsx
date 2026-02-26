@@ -17,7 +17,7 @@ const EventCard = ({ event }) => {
         athletics: "https://images.unsplash.com/photo-1596720426673-e4774457fd0a?q=80&w=800&auto=format&fit=crop",
         games: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop",
         football: "/football.jpg",
-        cricket: "/cricket.jpg",
+        cricket: "/cricket.jpeg",
         chess: "/chess.jpeg",
         carrom: "/carrom.jpeg",
 
@@ -32,7 +32,7 @@ const EventCard = ({ event }) => {
         "tabletennissingles(w)": "/tabletennis.jpeg",
         "tabletennisdoubles(w)": "/tabletennis.jpeg",
         tabletennis: "/tabletennis.jpeg",
-        badminton: "/badminton.png",
+        badminton: "/badminton.jpeg",
         "100m": "/100m.jpg",
         "200m": "/200m.jpg",
         "400m": "/400m.jpg",
