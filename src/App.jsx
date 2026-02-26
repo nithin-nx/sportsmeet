@@ -49,10 +49,10 @@ function App() {
             ))}
           </div>
           <p className="text-white/40 text-sm font-medium tracking-wide">
-            &copy; 2026 GEC Sports Meet. All rights reserved.
+            &copy; 2026 GECI Sports Meet. All rights reserved.
           </p>
           <p className="text-white/20 text-[10px] mt-2 uppercase tracking-[0.3em] font-black">
-            made by NiCo
+            made by NITHIN
           </p>
         </footer>
       </div>
