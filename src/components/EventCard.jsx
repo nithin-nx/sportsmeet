@@ -26,7 +26,7 @@ const EventCard = ({ event }) => {
         throwball: "/throwball.png",
         volleyball: "/volleyball.jpg",
         "basketball(w)": "/basketball.jpeg",
-        "basketball(m)": "/basketball.jpg",
+        "basketball(m)": "/basketball.jpeg",
         "tabletennissingles(m)": "/tabletennis.jpeg",
         "tabletennisdoubles(m)": "/tabletennis.jpeg",
         "tabletennissingles(w)": "/tabletennis.jpeg",
