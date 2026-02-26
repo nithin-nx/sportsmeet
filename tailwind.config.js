@@ -18,6 +18,9 @@ export default {
           bronze: '#CD7F32',
           crimson: '#FF4757',
         },
+        secondary: {
+          DEFAULT: '#FF4757', // Vibrant Coral-Red for high-impact stats
+        },
         dark: {
           bg: '#0a0a1a',
           card: 'rgba(255, 255, 255, 0.05)',
