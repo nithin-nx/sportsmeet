@@ -41,7 +41,9 @@ const EventCard = ({ event }) => {
         "3000m": "/3000m.jpg",
         shotput: "/shotput.jpg",
         javelinthrow: "/throw.jpg",
-        longjump: "/jump.jpg"
+        longjump: "/jump.jpg",
+        "discus throw": "/discuthrow.jpg",
+        
     };
 
     const bgUrl = bgImages[normalizedName] ||

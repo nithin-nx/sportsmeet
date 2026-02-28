@@ -13,12 +13,18 @@ export const useLiveFeed = () => {
 
         try {
             // Fetch matches (Live, Upcoming, and Past)
+            console.log("Fetching matches from Supabase...");
             const { data: matchesData, error: matchesError } = await supabase
                 .from('matches')
-                .select('*, team1:team1_id(*), team2:team2_id(*)')
-                .order('match_date', { ascending: false });
+                .select('*, team1:team1_id(*), team2:team2_id(*)');
+            // Temporarily disabled ordering to check if match_date exists
+            // .order('match_date', { ascending: false });
 
-            if (matchesError) throw matchesError;
+            if (matchesError) {
+                console.error("Match Fetch Error Detal:", matchesError);
+                throw matchesError;
+            }
+            console.log("Matches data received:", matchesData?.length, matchesData);
 
             // Fetch goals and innings if there are any matches
             let goalsData = [];

@@ -159,7 +159,7 @@ const CricketMatchCenter = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
+                            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8"
                         >
                             {/* Striker */}
                             <div className="glass-card p-5 border border-secondary/20 bg-secondary/5 flex items-center justify-between group hover:border-secondary/40 transition-colors">
@@ -179,6 +179,27 @@ const CricketMatchCenter = () => {
                                 <div className="text-right">
                                     <span className="text-xl font-display font-black text-white">{match.striker_runs || 0}</span>
                                     <span className="text-[10px] font-black text-white/20 ml-1">({match.striker_balls || 0})</span>
+                                </div>
+                            </div>
+
+                            {/* Non-Striker */}
+                            <div className="glass-card p-5 border border-white/5 bg-white/[0.02] flex items-center justify-between group hover:border-white/20 transition-colors">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+                                        <Users size={18} className="text-white/40" />
+                                    </div>
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-0.5">
+                                            <p className="text-[8px] font-black text-white/20 uppercase tracking-widest">Inning Snapshot</p>
+                                            <div className="w-1 h-1 rounded-full bg-white/10" />
+                                            <p className="text-[8px] font-black text-white/40 uppercase tracking-widest italic">Non-Striker</p>
+                                        </div>
+                                        <h4 className="text-sm font-black uppercase text-white group-hover:text-white/80 transition-colors">{match.non_striker_name || 'Waiting...'}</h4>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <span className="text-xl font-display font-black text-white/80">{match.non_striker_runs || 0}</span>
+                                    <span className="text-[10px] font-black text-white/20 ml-1">({match.non_striker_balls || 0})</span>
                                 </div>
                             </div>
 
