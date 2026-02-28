@@ -10,7 +10,11 @@ const EventCard = ({ event }) => {
     const hasDetails = !!event.date;
 
     // Normalizing name for image mapping (lowercase, no spaces)
-    const normalizedName = event.name.toLowerCase().replace(/\s+/g, '');
+    const normalizedName = event.name
+        .toLowerCase()
+        .replace(/\s+/g, '')
+        .replace(/-/g, '')
+        .replace(/[^a-z0-9()]/g, '');
 
     // Sports themed background images based on category/name
     const bgImages = {
@@ -42,8 +46,10 @@ const EventCard = ({ event }) => {
         shotput: "/shotput.jpg",
         javelinthrow: "/throw.jpg",
         longjump: "/jump.jpg",
-        "discus throw": "/discthrow.jpg",
-        
+        "discthrow(m)": "/discthrow.jpg",
+        "discthrow(w)": "/discthrow.jpg",
+
+        marchpast: "/marchpast.jpg"
     };
 
     const bgUrl = bgImages[normalizedName] ||
