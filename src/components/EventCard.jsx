@@ -42,7 +42,7 @@ const EventCard = ({ event }) => {
         shotput: "/shotput.jpg",
         javelinthrow: "/throw.jpg",
         longjump: "/jump.jpg",
-        "discus throw": "/discuthrow.jpg",
+        "discus throw": "/discthrow.jpg",
         
     };
 
